@@ -1,6 +1,6 @@
 /* global Vue axios */ //> from vue.html
 const $ = sel => document.querySelector(sel)
-import axios from 'axios'
+// import axios from 'axios'
 const GET = (url) => axios.get('/browse'+url)
 const POST = (cmd,data) => axios.post('/ListOfBooks'+cmd,data)
 
