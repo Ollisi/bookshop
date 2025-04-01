@@ -10,8 +10,8 @@ service CatalogService @(path:'/browse') {
     author.name as author
   } excluding { createdBy, modifiedBy };
 
-  @readonly entity ListOfBooks as projection on my.Books
-  excluding { descr, createdBy, modifiedBy }
+  @readonly entity ListOfBooks as projection on Books
+  excluding { descr }
 
   @requires: 'authenticated-user'
   action submitOrder (book: Books:ID, quantity: Integer);
