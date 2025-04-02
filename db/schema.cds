@@ -3,8 +3,8 @@ namespace sap.capire.bookshop;
 
 entity Books : managed {
   key ID   : Integer;
-  title    : String(111)  @mandatory;
-  descr    : String(1111);
+  title    : localized String(111)  @mandatory;
+  descr    : localized String(1111);
   author   : Association to Authors @mandatory;
   genre    : Association to Genres;
   stock    : Integer;
